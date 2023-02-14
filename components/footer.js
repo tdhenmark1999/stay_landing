@@ -38,11 +38,11 @@ export default function Footer() {
                 <li>Stay Green</li>
               </ul>
               <div className="logo__container">
-                <Image src={Logo1} />
-                <Image src={Logo2} />
-                <Image src={Logo3} />
-                <Image src={Logo4} />
-                <Image src={Logo5} />
+                <Image height={180} width='auto' src={Logo1} />
+                <Image height={180} width='auto' src={Logo2} />
+                <Image height={180} width='auto' src={Logo3} />
+                <Image height={180} width='auto' src={Logo4} />
+                <Image height={180} width='auto' src={Logo5} />
               </div>
             </div>
             <div className='col-md-3 py-2 p-0 column03'>

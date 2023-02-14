@@ -6,6 +6,7 @@ export default function Header() {
 
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [padding, setPadding] = useState(30);
+  const [heightSize, setHeightSize] = useState(50);
   const [boxShadow, setBoxShadow] = useState(0);
 
   useEffect(() => {
@@ -22,9 +23,11 @@ export default function Header() {
 
     if (backgroundTransparacyVar < 1) {
       let paddingVar = 30 - backgroundTransparacyVar * 20;
+      let heightVar = 50 - backgroundTransparacyVar * 20;
       let boxShadowVar = backgroundTransparacyVar * 0.1;
       setBackgroundTransparacy(backgroundTransparacyVar);
       setPadding(paddingVar);
+      setHeightSize(heightVar)
       setBoxShadow(boxShadowVar);
     }
   }, [clientWindowHeight]);
@@ -33,7 +36,7 @@ export default function Header() {
     <nav
       className="navbar navbar-expand-lg navbar-light fixed-top"
       style={{
-        background: `rgba(255, 255, 255,.5)`,
+        background: `rgba(255, 255, 255,.7)`,
         padding: `${padding}px 0px`,
         boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
       }}
@@ -56,7 +59,10 @@ export default function Header() {
               </button>
             </li>
             <li className="nav-item">
-              <Image src={logo} className="stay__logo" />
+              <Image src={logo} className="stay__logo" 
+              style={{
+                height: `${heightSize}px`,
+              }}/>
             </li>
             <li className="nav-item">
               <h2 className="txt__bookStay">
